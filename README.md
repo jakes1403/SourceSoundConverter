@@ -1,4 +1,5 @@
 # SourceSoundConverter
+Created by jakes1403/jakers1403
 Use this program to generate a vsndevts file from a sounds folder for Source 2 games.
 # Usage
 To get started, download the program from the releases tab.

@@ -51,6 +51,7 @@ std::string FMgt_RemoveExtension(const std::string& filename) {
 
 int main(int argc, char* argv[])
 {
+	cout << "Source Sound Converter By Jakes1403/Jakers1403\n";
 	LI_Init();
 	LI_ExecuteLua("config.lua");
 
@@ -61,6 +62,14 @@ int main(int argc, char* argv[])
 	string inputPath = LI_GetStringVarValue("inputPath");
 	float soundVolume = LI_GetFloatVarValue("volume");
 	float soundHRTF = LI_GetFloatVarValue("hrtf");
+
+	if (inputPath == "path_to_sounds_folder")
+	{
+		string throwaway;
+		cout << "Please edit your config.lua file to point to your sounds folder.\nPress any key to continue.";
+		getline(cin, throwaway);
+		return 0;
+	}
 
 	ofstream fileStream;
 	
